@@ -7,7 +7,7 @@ from django.test import TestCase
 from . import factories
 
 
-class TestFetch(TestCase):
+class TestModels(TestCase):
     "Test cases for models"
 
     def test_1_source_str(self):
@@ -43,3 +43,13 @@ class TestFetch(TestCase):
         )
         returned = str(instance)
         self.assertEqual(expected, returned)
+
+    def test_5_slugify(self):
+        "Test if the slug is set from the name."
+        subject = factories.models.Brand
+        provided = "This is some text!"
+        expected = factories.models.slugify(provided)
+        instance = subject(name=provided)
+        instance.save()
+        instance.refresh_from_db()
+        self.assertEqual(expected, instance.slug)

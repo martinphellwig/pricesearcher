@@ -9,8 +9,10 @@ from .. import models
 # docstring for meta classes, too few methods and warning for unnecessary lambda
 # warnings are not applicable here.
 
+
 class SourceFactory(factory.django.DjangoModelFactory):
     "Factory for the Source model."
+
     class Meta:
         model = models.Source
 
@@ -19,6 +21,7 @@ class SourceFactory(factory.django.DjangoModelFactory):
 
 class BrandFactory(factory.django.DjangoModelFactory):
     "Factory for the Brand model."
+
     class Meta:
         model = models.Brand
 
@@ -27,6 +30,7 @@ class BrandFactory(factory.django.DjangoModelFactory):
 
 class RetailerFactory(factory.django.DjangoModelFactory):
     "Factory for the Retailer model."
+
     class Meta:
         model = models.Retailer
 
@@ -35,6 +39,7 @@ class RetailerFactory(factory.django.DjangoModelFactory):
 
 class ProductFactory(factory.django.DjangoModelFactory):
     "Factory for the Product model."
+
     class Meta:
         model = models.Product
 
