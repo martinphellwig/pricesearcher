@@ -1,0 +1,18 @@
+_PROJECT_VERSION=0.0.1
+
+NAME_LONG=Pricesearcher API Example
+NAME_ABRV=Pricesearcher
+NAME_PROJECT=pricesearcher
+NAME_REPO=https://github.com/martinphellwig/pricesearcher
+NAME_DOMAIN=<none>
+
+DESCRIPTION=""
+
+OS_SUPPORT_0_TYPE=Linux
+OS_SUPPORT_0_DIST=Ubuntu
+OS_SUPPORT_0_RELEASE=18.04
+OS_SUPPORT_0_C_LDD=2.27
+
+RUNTIME_DEPENDENCY_0=Python==3.7
+RUNTIME_DEPENDENCY_1=virtualenv==16.1.0
+RUNTIME_DEPENDENCY_2=virtualenvwrapper==4.8
