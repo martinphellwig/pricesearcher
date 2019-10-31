@@ -43,6 +43,7 @@ class ProductFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = models.Product
 
+    source = factory.SubFactory(SourceFactory)
     external_id = factory.Sequence(lambda sequence: "{}".format(sequence))
     name = factory.Sequence(lambda sequence: "Retailer #{}".format(sequence))
     brand = factory.SubFactory(BrandFactory)

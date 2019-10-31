@@ -46,6 +46,7 @@ class TestModels(TestCase):
 
     def test_5_slugify(self):
         "Test if the slug is set from the name."
+        factories.reset()
         subject = factories.models.Brand
         provided = "This is some text!"
         expected = factories.models.slugify(provided)
