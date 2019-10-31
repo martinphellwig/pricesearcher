@@ -53,8 +53,9 @@ class Retailer(SlugNameBase):
 
 class Product(models.Model):
     "Product"
+    source = models.ForeignKey(Source, on_delete=models.CASCADE)
     external_id = models.CharField(max_length=16)
-    name = models.CharField(max_length=64)
+    name = models.CharField(max_length=64, blank=True, null=True)
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
     retailer = models.ForeignKey(Retailer, on_delete=models.CASCADE)
     price = models.DecimalField(null=True, decimal_places=2, max_digits=8)

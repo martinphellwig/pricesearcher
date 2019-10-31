@@ -6,3 +6,4 @@ ipython==7.8.0
 isort==4.3.21
 pylint==2.4.0
 requests==2.22.0
+tqdm==4.36.1
